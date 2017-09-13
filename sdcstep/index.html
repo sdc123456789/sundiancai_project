@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<script src="js/jquery-1.11.1.min.js"></script>
+<link href="css/public.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/sindex.css" />
+<script src="js/template.js"></script>
+<script src="js/ajax.js"></script>
+</head>
+<body>
+		<header></header>
+		<nav></nav>
+		<div id="banner">
+			<ul>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+			</ul>
+			<ol>
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+			</ol>
+			<div class="l"><</div>
+			<div class="r">></div>
+		</div>
+		<section id="update">
+			<p>
+				<span class="time"></span>
+				<span class="tm">每天10点 &ensp;&ensp;&ensp;新特卖</span>
+			</p>
+			<p class="left"><a href="">暂无更新</a></p>
+		</section>
+		<section id="sale" class="clear">
+		<div id="list">
+			<p class="list-t">
+				<span class="list-t-l">
+					最新特卖进行中
+				</span>
+				<span class="list-t-r">
+					限时特卖抢先购 &ensp;|&ensp;100%正品保证
+				</span>
+			</p>	
+			<ul id="main">
+				<!--<li>
+					<a href="#">
+						<div class="main-l">
+							<p class="img"><img src="images/log1.jpg"/></p>
+							<p class="gobal">全球购澳佳宝特卖</p>
+							<p class="feel">自然健康营养品</p>
+							<p class="djs"></p>
+						</div>
+						<div class="main-r"><img src="images/list1.jpg" /></div>
+					</a>
+				</li>-->
+			</ul>	
+			</div>
+			<!--定义模板-->
+			<script type="text/html" id="lists">
+			{{each arr as value i}}
+				<li>
+				<a href="#">
+					<div class="main-l">
+						<p class="img"><img src="images/{{arr[i].srcl}}"/></p>
+						<p class="gobal">{{arr[i].massage}}</p>
+						<p class="feel">{{arr[i].xj}}</p>
+						<p class="djs"></p>
+					</div>
+					<div class="main-r"><img src="images/{{arr[i].src}}" /></div>
+				</a>
+				</li>
+			{{/each}}
+			</script>
+			
+			<div id="notice">
+				<span class="z">热卖进行</span>
+				<span class="y">明日预告</span>
+				<p class="s"><i></i></p>
+				<p class="x"><i></i></p><br />
+				<div id="wrap">
+				<ul>
+					<li><a href=""><img src="images/log1.jpg"/></a></li>
+					<li><a href=""><img src="images/log2.jpg"/></a></li>
+					<li><a href=""><img src="images/log3.jpg"/></a></li>
+					<li><a href=""><img src="images/log4.jpg"/></a></li>
+					<li><a href=""><img src="images/log5.jpg"/></a></li>
+					<li><a href=""><img src="images/log6.jpg"/></a></li>
+					<li><a href=""><img src="images/log7.jpg"/></a></li>
+					<li><a href=""><img src="images/log8.jpg"/></a></li>
+					<li><a href=""><img src="images/log9.jpg"/></a></li>
+					<li><a href=""><img src="images/log10.jpg"/></a></li>
+					<li><a href=""><img src="images/log11.jpg"/></a></li>
+					<li><a href=""><img src="images/log12.jpg"/></a></li>
+					<li><a href=""><img src="images/log13.jpg"/></a></li>
+					<li><a href=""><img src="images/log14.jpg"/></a></li>
+				</ul>
+				<ul>
+					<li><a href=""><img src="images/log11.jpg"/></a></li>
+					<li><a href=""><img src="images/log12.jpg"/></a></li>
+					<li><a href=""><img src="images/log13.jpg"/></a></li>
+					<li><a href=""><img src="images/log14.jpg"/></a></li>
+					
+				</ul>
+				
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+		</section>
+		<footer></footer>
+	</body>
+	
+	
+	
+	
+	
+	<script>
+	window.onload = function(){
+		
+	}
+	//------------------------------------------
+	$(window).scroll(function(){
+		sTop = $(document).scrollTop()
+		console.log(sTop)
+		if(sTop>744&&sTop<3480){
+			$("#notice").css({
+				"position":"fixed",
+				"top":"0"
+				
+			})
+		}else if(sTop>3480){
+			$("#notice").css({
+				"position":"absolute",
+				"top":"3590px",
+				"left":"890px"
+				
+			})
+		}else{
+			$("#notice").css({
+				"position":"absolute",
+				"left":"890px",
+				"top":"744px"
+			})
+		}
+	})
+
+	
+	</script>
+</html> 
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/index.js" ></script>
