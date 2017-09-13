@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery.min.js"></script>
+		
+		<style>
+			#shopbtn{
+				font-size: 30px;
+				padding: 5px 10px;
+				border: 1px solid red;
+				margin-bottom: 20px;
+				cursor: pointer;
+			}
+			p,button{
+				margin-left:80px;
+			}
+			img{
+				margin-left:40px ;
+			} 
+		</style>
+		<script src="cookie.js"></script>
+	</head>
+	<body>
+		
+		<div class="shopinfo">
+			<!--<img src="img/1.jpg" alt="" />
+			<p>小米1</p>
+			<p>333</p>
+			<button>购买</button>-->
+		</div>
+		
+			
+	</body>
+</html>
+<script type="text/javascript">
+	var str = location.href;
+	//http://127.0.0.1/shopCart_sh1705/page.html?pid=shop01&cname=classify001
+	var arr = str.split("?")[1];
+	var pid = arr.split("&")[0].split("=")[1];
+	var cname = arr.split("&")[1].split("=")[1];
+	$.ajax({
+		type:"get",
+		url:"http://127.0.0.1/shopCart_sh1705/data.json",
+		success : function(res){
+			//console.log( res[cname].list );
+			var str = "";
+			for(var i in res[cname].list){
+				if( pid == res[cname].list[i].id ){//找到了要显示的商品详情
+					str = `<img src="img/${ res[cname].list[i].src }" alt="" />
+							<p>${res[cname].list[i].name }</p>
+							<p>${ res[cname].list[i].price }</p>
+							<button>购买</button>`;		
+				}
+			}
+			$(".shopinfo").html(str);
+		}
+	});
+</script>
