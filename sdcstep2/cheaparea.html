@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/cheap.js" ></script>	
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<link href="css/public.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/cheap.css" />
+		<script src="js/template.js" ></script>
+		<script type="text/javascript" src="js/ajax.js" ></script>
+	</head>
+	<body>
+		<script type="text/html" id="list" >
+			{{each arr as value i}}
+				<li>
+					<a href="">
+							<img src="images/{{arr[i].src}}" />
+							<div class="n">{{arr[i].name}}</div>
+							<div class="p">
+								<p class="ps" style="text-decoration:line-through;">{{arr[i].yj}}</p>
+								<p class="xj">{{arr[i].xj}}</p>
+							</div>
+					</a>
+				</li>
+			{{/each}}
+		</script>
+		<script>
+			window.onload=function(){
+					var data = {
+					arr : [] //数组中存放的数据 就是ajax从服务器获取的数据
+				}
+				ajaxGet("json/cheap-data.json",function(str){
+					var arr = JSON.parse(str);
+					//将服务器获取的数据 arr  传递给data的arr
+					data.arr = arr;
+					
+					var html = template("list",data);
+					document.getElementById("main").innerHTML = html;
+				})
+			}
+		</script>
+		
+		<header></header>
+		<nav></nav>
+		<div id="banner"></div>
+		<div id="box">
+			<ul id="main">
+				<!--<li>
+					<a href="">
+						<img src="images/1.jpg" />
+						<div class="n">海地村 原装进口 DHA鳕鱼肠40g</div>
+						<div class="p">
+							<p class="ps" style="text-decoration:line-through;">市场价￥8</p>
+							<p class="xj">速普特惠价<strong><strong>￥3.9</strong></strong></p>
+						</div>
+					</a>
+				</li>-->
+				
+			</ul>
+		</div>
+		
+		<footer></footer>		
+		
+		
+		
+		
+	</body>
+</html>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/cheap.js" ></script>

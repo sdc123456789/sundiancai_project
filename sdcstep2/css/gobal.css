@@ -1,0 +1,321 @@
+body {
+  background: #F3F3F3;
+}
+#banner {
+  width: 100%;
+  height: 507px;
+  text-align: center;
+}
+#banner ul {
+  position: relative;
+}
+#banner ul li {
+  position: absolute;
+  height: 507px;
+  width: 100%;
+  background: url(../images/banner-gobal.jpg) no-repeat center;
+}
+#country {
+  width: 100%;
+  height: 220px;
+}
+#country .c-log {
+  height: 60px;
+  width: 100%;
+  margin: 20px 10px 0 30px ;
+}
+#country #lunb {
+  width: 1194px;
+  height: 160px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+#country #lunb ul {
+  width: 1500px;
+  height: 160px;
+  position: absolute;
+}
+#country #lunb ul li {
+  float: left;
+  width: 292px;
+  height: 158px;
+  border: 2px solid #fff;
+  margin-left: 2px;
+}
+#country #lunb span {
+  display: inline-block;
+  width: 40px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font: 800 20px/60px "";
+  position: absolute;
+  z-index: 3;
+  text-align: center;
+  display: none;
+  cursor: pointer;
+}
+#country #lunb .le {
+  left: 4px;
+  top: 50px;
+}
+#country #lunb .ri {
+  right: 10px;
+  top: 50px;
+}
+#select {
+  width: 100%;
+  height: 220px;
+  margin-bottom: 30px;
+}
+#select .s-log {
+  height: 60px;
+  width: 100%;
+  margin: 10px 10px 0 30px ;
+}
+#select #lunbo {
+  width: 1192px;
+  height: 160px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+#select #lunbo ul {
+  width: 1500px;
+  height: 160px;
+  position: absolute;
+}
+#select #lunbo ul li {
+  float: left;
+  width: 292px;
+  height: 158px;
+  border: 2px solid #fff;
+  margin-left: 2px;
+}
+#select #lunbo span {
+  display: inline-block;
+  width: 40px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font: 800 20px/60px "";
+  position: absolute;
+  z-index: 3;
+  text-align: center;
+  display: none;
+  cursor: pointer;
+}
+#select #lunbo .lef {
+  left: 4px;
+  top: 50px;
+}
+#select #lunbo .rig {
+  right: 10px;
+  top: 50px;
+}
+#bbox {
+  width: 100%;
+  height: 621px;
+}
+#bbox h1 {
+  color: #666;
+  font: 26px/40px "";
+  margin-left: 40px;
+}
+#bbox #cox {
+  width: 1300px;
+  height: 621px;
+  margin-left: 30px;
+}
+#bbox #cox ul li {
+  width: 588px;
+  height: 260px;
+  float: left;
+  margin: 8px;
+}
+#bbox #cox ul li a {
+  display: block;
+}
+#bbox #cox ul li a .cox-t {
+  position: relative;
+}
+#bbox #cox ul li a .cox-t .cox-t-t {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  width: 588px;
+  height: 60px;
+  background: #fff;
+  display: none;
+}
+#bbox #cox ul li a .cox-t .cox-t-t .cox-t-t1 {
+  margin-left: 20px;
+  font: 14px/56px "";
+  position: absolute;
+  bottom: -35px;
+}
+#bbox #cox ul li a .cox-t .cox-t-t .cox-t-t2 {
+  margin-left: 10px;
+  font: 20px/56px "";
+  color: #E5004A;
+  position: absolute;
+  bottom: -35px;
+  right: 10px;
+}
+#bigbox {
+  width: 1200px;
+  margin: 0 auto;
+}
+#bigbox h1 {
+  padding: 10px ;
+}
+#bigbox .f {
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  margin-bottom: 16px;
+}
+#bigbox .f span {
+  font: 18px/40px "";
+  padding-left: 10px;
+  padding-right: 30px;
+}
+#bigbox .f a {
+  padding: 6px;
+  font: 14px/40px "";
+}
+#bigbox .f a:hover {
+  color: #E5004A;
+}
+#bigbox .d {
+  width: 100%;
+  height: 40px;
+  background: #fff;
+}
+#bigbox .d span {
+  font: 18px/40px "";
+  padding-left: 10px;
+  padding-right: 30px;
+}
+#bigbox .d a {
+  padding: 6px;
+  font: 14px/40px "";
+}
+#bigbox .d a:hover {
+  color: #E5004A;
+}
+#bigbox #bwrap {
+  margin-top: 20px;
+}
+#bigbox #bwrap ul li:hover {
+  border: 2px solid #E5004A;
+}
+#bigbox #bwrap ul li:hover .gm .gm-c {
+  background: #E5004A;
+  color: #fff;
+}
+#bigbox #bwrap ul li {
+  transition: 1s;
+  box-sizing: border-box;
+  padding-top: 10px;
+  text-align: center;
+  width: 280px;
+  height: 400px;
+  background: #fff;
+  border: 2px solid #fff;
+  margin: 6px;
+  float: left;
+}
+#bigbox #bwrap ul li img {
+  width: 266px;
+  height: 266px;
+}
+#bigbox #bwrap ul li .xm {
+  transition: .5s;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  font: 16px/30px "";
+}
+#bigbox #bwrap ul li .xm:hover {
+  color: #E5004A;
+}
+#bigbox #bwrap ul li .jg {
+  width: 100%;
+  height: 30px;
+}
+#bigbox #bwrap ul li .jg u {
+  font: 800 18px/30px "";
+  color: #E5004A;
+  margin: 10px 6px 10px 0;
+}
+#bigbox #bwrap ul li .jg i {
+  text-decoration: line-through;
+}
+#bigbox #bwrap ul li .gm {
+  height: 34px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+#bigbox #bwrap ul li .gm .gm-l {
+  width: 57px;
+  height: 34px;
+}
+#bigbox #bwrap ul li .gm .gm-l input {
+  width: 42px;
+  height: 30px;
+  float: left;
+}
+#bigbox #bwrap ul li .gm .gm-l a {
+  width: 11px;
+  height: 14px;
+  background: #F6F6F6;
+  display: block;
+  float: right;
+}
+#bigbox #bwrap ul li .gm .gm-c {
+  width: 142px;
+  height: 34px;
+  background: #F6F6F6;
+  font: 16px/34px "";
+  cursor: pointer;
+  transition: 1s;
+}
+#bigbox #bwrap ul li .gm .gm-r {
+  width: 58px;
+  height: 34px;
+  background: #F6F6F6;
+  font: 16px/34px "";
+  cursor: pointer;
+}
+#bigbox #bwrap #boxf {
+  width: 400px;
+  height: 30px;
+  margin: 10px auto;
+  border: 1px solid #137CE9;
+  display: flex;
+  justify-content: space-around;
+  line-height: 30px;
+}
+#bigbox #bwrap #boxf span {
+  cursor: pointer;
+}
+#bigbox #bwrap #boxf #u li {
+  margin-top: 5px;
+  float: left;
+  margin-left: 6px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+}
+#bigbox #bwrap #boxf #u li.active {
+  background: #F269A0;
+  color: #a6ce39;
+}

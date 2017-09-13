@@ -1,0 +1,294 @@
+body {
+  background: #F2F2F2;
+}
+header {
+  width: 100%;
+  height: 110px;
+  background: #F2F2F2;
+  font: 24px/110px "";
+}
+#bner {
+  position: relative;
+  width: 100%;
+  height: 484px;
+  background: url(../images/login-bg.jpg) no-repeat center;
+}
+#bner #show {
+  position: absolute;
+  top: 46px;
+  left: 820px;
+  width: 342px;
+  height: 394px;
+}
+#bner #show .pc {
+  position: absolute;
+  width: 342px;
+  height: 394px;
+  background: #fff;
+}
+#bner #show #login {
+  top: 0px;
+  left: 0px;
+}
+#bner #show #login .login-t {
+  margin-top: 20px;
+  width: 100%;
+  height: 30px;
+}
+#bner #show #login .login-t h2 {
+  float: left;
+  margin-left: 10px;
+  display: block;
+  font: 900 20px/30px "";
+  color: #686565;
+}
+#bner #show #login .login-t p {
+  float: right;
+  font: 14px/30px "";
+  display: block;
+  margin-right: 10px;
+}
+#bner #show #login .login-t p a {
+  color: #137ce9;
+}
+#bner #show #login .login-put span {
+  display: block;
+  width: 100%;
+  height: 20px;
+  margin: 0 auto;
+  color: red;
+  text-align: center;
+}
+#bner #show #login .login-put p {
+  width: 292px;
+  height: 46px;
+  background: #F9F9F9;
+  margin: 10px auto;
+  line-height: 46px;
+  display: flex;
+  justify-content: space-around;
+}
+#bner #show #login .login-put p i {
+  display: inline-block;
+  height: 46px;
+  width: 46px;
+  background: url(../images/login_icon.png) no-repeat;
+}
+#bner #show #login .login-put p input {
+  border: none;
+  width: 240px;
+  background: #F9F9F9;
+}
+#bner #show #login .login-put p:nth-child(2) i {
+  background-position: 16px -110px;
+}
+#bner #show #login .login-put p:nth-child(3) i {
+  background-position: 16px -166px;
+}
+#bner #show #login .silding {
+  position: relative;
+  width: 292px;
+  height: 46px;
+  margin: 10px auto;
+  background: #F29DBA;
+  color: #fff;
+  text-align: center;
+  font: 14px/46px "";
+}
+#bner #show #login .silding .s-block {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 52px;
+  height: 40px;
+  background: #fff;
+  text-align: center;
+  font: 35px/40px "";
+  color: #F29DBA;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#bner #show #login .check {
+  width: 292px;
+  height: 30px;
+  margin: 20px auto;
+  line-height: 30px;
+  display: flex;
+  justify-content: space-around;
+  color: #777676;
+}
+#bner #show #login .denglu {
+  margin: 5px auto;
+  width: 292px;
+  height: 35px;
+  font: 18px/35px "";
+  text-align: center;
+  color: #fff;
+  background: #E4004B;
+  cursor: pointer;
+}
+#bner #show #login .copter {
+  width: 292px;
+  height: 40px;
+  margin: 8px auto;
+  color: #777676;
+}
+#bner #show #register {
+  top: 0px;
+  left: -420px;
+  opacity: 0;
+}
+#bner #show #register .register-t {
+  margin-top: 20px;
+  width: 100%;
+  height: 30px;
+}
+#bner #show #register .register-t h2 {
+  float: left;
+  margin-left: 10px;
+  display: block;
+  font: 900 20px/30px "";
+  color: #686565;
+}
+#bner #show #register .register-t p {
+  float: right;
+  font: 14px/30px "";
+  display: block;
+  margin-right: 10px;
+}
+#bner #show #register .register-t p a {
+  color: #137ce9;
+}
+#bner #show #register .register-put span {
+  display: block;
+  width: 100%;
+  height: 20px;
+}
+#bner #show #register .register-put p {
+  width: 292px;
+  height: 46px;
+  background: #F9F9F9;
+  margin: 10px auto;
+  line-height: 46px;
+  display: flex;
+  justify-content: space-around;
+}
+#bner #show #register .register-put p i {
+  display: inline-block;
+  height: 46px;
+  width: 46px;
+  background: url(../images/login_icon.png) no-repeat;
+}
+#bner #show #register .register-put p input {
+  border: none;
+  width: 240px;
+  background: #F9F9F9;
+}
+#bner #show #register .register-put p:nth-child(2) i {
+  background-position: 16px -110px;
+}
+#bner #show #register .register-put p:nth-child(3) i {
+  background-position: 16px -166px;
+}
+.yzm{
+                width:292px;
+                height:40px;
+                margin:0 auto;
+                background:#fff;
+                display: flex;
+                justify-content:space-between;
+                margin-bottom: 10px;
+            }
+.yzm p:nth-child(1){
+		width:150px;
+		display: flex;
+		justify-content: space-around;
+		background: #F9F9F9;
+}
+.yzm p:nth-child(2){
+	width:100px;
+		background: #F9F9F9;
+		font: 14px/40px "";
+		text-align: center;
+		cursor: pointer;
+}
+.yzm p:nth-child(1) i{ 
+	width:40px;
+	height:40px;
+	display:block;
+	background:url(../images/login_icon.png) no-repeat;
+	background-position: 14px -396px;
+}
+.yzm p:nth-child(1) input{
+	width:100px;
+	height:40px;
+	border: none;
+		background: #F9F9F9;
+}
+
+.ipm{
+                width:292px;
+                height:40px;
+                margin:0 auto;
+                background:#fff;
+                display: flex;
+                justify-content:space-between;
+                margin-bottom: 18px;
+            }
+.ipm p:nth-child(1){
+		width:150px;
+		display: flex;
+		justify-content: space-around;
+		background: #F9F9F9;
+}
+.ipm p:nth-child(2){
+	width:100px;
+		background:#E5004A;
+		color:#fff;
+		font: 14px/40px "";
+		text-align: center;
+		cursor: pointer;
+}
+.ipm p:nth-child(1) i{ 
+	width:40px;
+	height:40px;
+	display:block;
+	background:url(../images/login_icon.png) no-repeat;
+	background-position: 14px -288px;
+}
+.ipm p:nth-child(1) input{
+	width:100px;
+	height:40px;
+	border: none;
+		background: #F9F9F9;
+}
+.agree{
+								width:292px;
+                height:20px;
+                margin:0 auto;
+                margin-bottom: 18px;
+}
+.agree a{
+	color:#137CE9;
+}
+.agree a:hover{
+	color:#E5004A;
+}
+.zc{
+	              width:292px;
+                height:40px;
+                margin:0 auto;
+                font:18px/40px "";
+                color:#fff;
+                background: #E5004A;
+                text-align: center;
+                
+}
+
+
+
+footer {
+  width: 100%;
+  height: 130px;
+  background: url(../images/login-ft.png) repeat-x center;
+}

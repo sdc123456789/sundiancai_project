@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/template.js"></script>
+		<script src="js/ajax.js"></script>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<link href="css/public.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/register.css">
+	</head>
+	<body>
+		<header>
+			<img src="images/login.png" /> 
+			<span id="bannr">欢迎<i>注册</i></span>
+		</header>
+		<div id="bner">
+			<div id="show">
+				<div id="login" class="pc">
+					<div class="login-t clear">
+						<h2>会员登录</h2>
+						<p>
+							<i>没有速普账号?</i><a href="javascrip:void(0)" id="btn-login">立即注册</a>
+						</p>
+					</div>
+					<div class="login-put">
+						<span class="ts"></span>
+						<p>
+							<i></i><input type="text" name="uname" id="uname"  placeholder="邮箱、手机号、账号" class="put-t" />
+						</p>
+						<p>
+							<i></i><input type="text" name="upwd" id="upwd" placeholder="密码" class="put-b" />
+						</p>
+					</div>
+					<div class="silding">
+						拖动滑块到最后边
+						<p class="s-block">></p>
+					</div>
+					<div class="check">
+						<span><input type="checkbox" />记住用户名</span>
+						<span><input type="checkbox" />自动登录</span>
+						<span><a href="">密码忘记了？</a></span>
+					</div>
+					<div class="denglu" id="btn">登录</div>
+					<div class="copter">
+						合作账户登录：
+						<a href=""><img src="images/zhifubao.png"/> </a>
+						<a href=""><img src="images/weibo.png" /> </a>
+					</div>
+					
+					
+					
+				</div>
+				
+				
+				
+				
+				<div id="register" class="pc">
+					<div class="register-t clear">
+						<h2>用户注册</h2>
+						<p>
+							<i>没有速普账号?</i><a href="javascrip:void(0)" id="btn-register">立即登录</a>
+						</p>
+					</div>
+					<div class="register-put">
+						<span class="ts"></span>
+						<p>
+							<i></i><input type="text" name="unamer" id="unamer" placeholder="邮箱、手机号" class="putr-t" />
+						</p>
+						<p>
+							<i></i><input type="text" name="upwdr" id="upwdr" placeholder="6-16字符，必须包含英文字母和数字" class="putr-b" />
+						</p>
+					</div>
+					<div class="yzm">
+						<p><i></i><input type="text" placeholder="输入验证码"/></p>
+						<p id="yzm-btn">6666</p>
+					</div>
+					
+					<div class="ipm">
+						<p><i></i><input type="text" placeholder="输入手机验证码"/></p>
+						<p>获取验证码</p>
+					</div>
+					<div class="agree">
+						<input type="checkbox" />
+						 我已阅读并同意<a href="#">《速普b商城用户协议》</a>
+					</div>
+					<div class="zc" id="btnr">注册</div>
+					
+				</div>
+			</div>
+		</div>
+		<footer></footer>
+		
+		<script>
+		$("#login .login-put").find(".put-t").blur(function(){
+			var reg = /^[1-9]\d{10}$/
+			var val = $("#login .login-put").find(".put-t").val()
+			if(!reg.test(val)){
+				$("#login .login-put").find(".ts").html("手机号码格式不正确")
+												
+			}
+		})
+		
+		$("#login .login-put").find(".put-b").blur(function(){
+			var reg = /^\w{6-11}$/
+			var val = $("#login .login-put").find(".put-b").val()
+			if(!reg.test(val)){
+				$("#login .login-put").find(".ts").html("密码格式不正确")
+												  
+			}
+		})
+		//-------------登录-
+		function ID(id){
+				return document.getElementById(id);
+			}
+			
+		ID("btn").onclick = function(){
+		var ajax = null;
+		if(window.XMLHttpRequest){
+			ajax = new XMLHttpRequest();
+		}else{
+			ajax = new ActiveXObject("Microsoft.XMLHTTP")
+		}
+		
+		ajax.open("POST","http://127.0.0.1/sdcstep2/php/login.php",true);
+		
+		ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		var data = "uname="+ID("uname").value+"&upwd="+ID("upwd").value;
+		ajax.send(data);
+		ajax.onreadystatechange = function(){
+			if(ajax.status==200&&ajax.readyState==4){
+				switch(ajax.responseText){
+					case "1":alert("登录成功");
+					location.href="http://127.0.0.1/sdcstep2/index.html";
+					break;
+					case "0":alert("登录失败");
+					break;
+				}
+				                                                                                                                                                                                                                                                                                                                
+				
+			}
+		}
+		
+	}	
+	//------注册------
+		ID("yzm-btn").onclick = function(){
+			
+			
+			ID("yzm-btn").innerHTML = Math.random().toString(10).substring(2,6);
+		}
+			
+		ID("btnr").onclick = function(){
+		var ajax = null;
+		if(window.XMLHttpRequest){
+			ajax = new XMLHttpRequest();
+		}else{
+			ajax = new ActiveXObject("Microsoft.XMLHTTP")
+		}
+		
+		ajax.open("POST","http://127.0.0.1/sdcstep2/php/register.php",true);
+		
+		ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		var data = "uname="+ID("unamer").value+"&upwd="+ID("upwdr").value;
+		ajax.send(data);
+		ajax.onreadystatechange = function(){
+			if(ajax.status==200&&ajax.readyState==4){
+				switch(ajax.responseText){
+					case "1":alert("注册成功");
+					location.href="login.html";
+					break;
+					case "0":alert("注册失败");
+					break;
+					case "2":alert("用户名已存在");
+				}
+				                                                                                                                                                                                                                                                                                                                
+				
+			}
+		}
+		
+	}	
+		
+			
+			
+			
+			
+			
+			
+			
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>
+<script src="js/register.js" ></script>
